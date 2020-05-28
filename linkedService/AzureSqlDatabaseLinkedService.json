@@ -6,7 +6,7 @@
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
 			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=spijkerkwartier.database.windows.net;initial catalog=spijkerkwartier;user id=aim_admin",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkFJTS1ERU1PLU9NR0VWSU5HXzFmZDk2YTE0LTIzZTItNDg2Yi05Zjc3LWRjMjJkMGE3ZDA3OSINCn0="
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkFJTS1ERU1PLU9NR0VWSU5HX2RkODU5YmQ4LTMxYjctNDNmYi1iOGE2LWE4NzJjNWMzODJkMCINCn0="
 		}
 	}
 }
