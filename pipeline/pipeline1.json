@@ -48,7 +48,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "Hub_Building",
 						"type": "DatasetReference"
 					}
 				]
