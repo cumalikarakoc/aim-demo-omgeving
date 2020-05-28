@@ -1,0 +1,273 @@
+{
+	"name": "buildings_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureStorageLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "buildings.json",
+				"folderPath": "input",
+				"container": "aim-demo-omgeving"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"GREEN_M2": {
+					"type": "integer"
+				},
+				"SLANTING_ROOF_HEIGHT": {
+					"type": "integer"
+				},
+				"OWNER": {
+					"type": "string"
+				},
+				"ID": {
+					"type": "integer"
+				},
+				"MONUMENTAL": {
+					"type": "integer"
+				},
+				"FUNCTION": {
+					"type": "string"
+				},
+				"NAME": {
+					"type": "string"
+				},
+				"BRIDGE_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"BOUWJAAR": {
+					"type": "integer"
+				},
+				"HEAT_EFFECT": {
+					"type": "integer"
+				},
+				"BRIDGE_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"BRIDGE_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"BRIDGE_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"ROAD_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"ROAD_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"ROAD_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"ROAD_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"ROAD_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"PAVED_AREA_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"PAVED_AREA_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"PAVED_AREA_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"PAVED_AREA_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"PAVED_AREA_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"SOCIAL_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"SOCIAL_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"SOCIAL_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"SOCIAL_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"SOCIAL_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"SHOPPING_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"SHOPPING_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"SHOPPING_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"SHOPPING_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"SHOPPING_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"OTHER_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"OTHER_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"OTHER_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"OTHER_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"OTHER_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"NORMAL_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"NORMAL_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"NORMAL_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"NORMAL_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"NORMAL_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"OFFICES_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"OFFICES_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"OFFICES_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"OFFICES_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"OFFICES_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"LUXE_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"LUXE_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"LUXE_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"LUXE_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"LUXE_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"INDUSTRY_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"INDUSTRY_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"INDUSTRY_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"INDUSTRY_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"INDUSTRY_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"EDUCATION_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"EDUCATION_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"EDUCATION_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"EDUCATION_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"EDUCATION_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"LEISURE_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"LEISURE_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"LEISURE_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"LEISURE_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"LEISURE_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"HEALTHCARE_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"HEALTHCARE_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"HEALTHCARE_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"HEALTHCARE_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"HEALTHCARE_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"NATURE_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"NATURE_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"NATURE_SELL_PRICE_M2": {
+					"type": "string"
+				},
+				"NATURE_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"NATURE_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"GARDEN_HEAT_FLOW_M2_START_YEAR": {
+					"type": "string"
+				},
+				"GARDEN_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "string"
+				},
+				"GARDEN_HEAT_FLOW_M2_START_VALUE": {
+					"type": "string"
+				},
+				"GARDEN_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "string"
+				},
+				"GARDEN_SELL_PRICE_M2": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
