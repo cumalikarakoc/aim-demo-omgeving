@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Loa_Hub_Building",
+				"name": "Load_Hub_Building",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
