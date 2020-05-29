@@ -1,5 +1,5 @@
 {
-	"name": "HUB_Building",
+	"name": "HUB_Category",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabaseLinkedService",
@@ -9,12 +9,12 @@
 		"type": "AzureSqlTable",
 		"schema": [
 			{
-				"name": "Building_sqnr",
+				"name": "Category_sqnr",
 				"type": "int",
 				"precision": 10
 			},
 			{
-				"name": "Building_ID",
+				"name": "Category_ID",
 				"type": "int",
 				"precision": 10
 			},
@@ -31,7 +31,7 @@
 		],
 		"typeProperties": {
 			"schema": "SpijkerkwartierDV",
-			"table": "HUB_Building"
+			"table": "HUB_Category"
 		}
 	}
 }

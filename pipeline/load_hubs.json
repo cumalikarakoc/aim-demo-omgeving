@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Load_Hub_Building",
+				"name": "Load_HUB_Building",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -54,7 +54,57 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "Hub_Building",
+						"referenceName": "HUB_Building",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Load_HUB_Category",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00"
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Category_ID",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "Category_ID",
+									"type": "Int32"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Category",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "HUB_Category",
 						"type": "DatasetReference"
 					}
 				]
