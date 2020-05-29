@@ -1,0 +1,42 @@
+{
+	"name": "Load_Sat_Building",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "buildings_json",
+						"type": "DatasetReference"
+					},
+					"name": "sourceBuildings"
+				},
+				{
+					"dataset": {
+						"referenceName": "Hub_Building",
+						"type": "DatasetReference"
+					},
+					"name": "HubBuildings"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Sat_Building",
+						"type": "DatasetReference"
+					},
+					"name": "SatBuildings"
+				}
+			],
+			"transformations": [
+				{
+					"name": "JoinSourceHubBuildings"
+				},
+				{
+					"name": "SelectSourceHubBuildings"
+				}
+			],
+			"script": "source(output(\n\t\tGREEN_M2 as string,\n\t\tSLANTING_ROOF_HEIGHT as string,\n\t\tOWNER as string,\n\t\tID as string,\n\t\tMONUMENTAL as string,\n\t\tFUNCTION as string,\n\t\tNAME as string,\n\t\tBRIDGE_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tBOUWJAAR as string,\n\t\tHEAT_EFFECT as string,\n\t\tBRIDGE_HEAT_FLOW_M2_START_VALUE as string,\n\t\tBRIDGE_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tBRIDGE_HEAT_FLOW_M2_START_YEAR as string,\n\t\tROAD_HEAT_FLOW_M2_START_YEAR as string,\n\t\tROAD_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tROAD_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tROAD_HEAT_FLOW_M2_START_VALUE as string,\n\t\tROAD_SELL_PRICE_M2 as string,\n\t\tPAVED_AREA_SELL_PRICE_M2 as string,\n\t\tPAVED_AREA_HEAT_FLOW_M2_START_VALUE as string,\n\t\tPAVED_AREA_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tPAVED_AREA_HEAT_FLOW_M2_START_YEAR as string,\n\t\tPAVED_AREA_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tSOCIAL_SELL_PRICE_M2 as string,\n\t\tSOCIAL_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tSOCIAL_HEAT_FLOW_M2_START_VALUE as string,\n\t\tSOCIAL_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tSOCIAL_HEAT_FLOW_M2_START_YEAR as string,\n\t\tSHOPPING_HEAT_FLOW_M2_START_VALUE as string,\n\t\tSHOPPING_SELL_PRICE_M2 as string,\n\t\tSHOPPING_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tSHOPPING_HEAT_FLOW_M2_START_YEAR as string,\n\t\tSHOPPING_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tOTHER_SELL_PRICE_M2 as string,\n\t\tOTHER_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tOTHER_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tOTHER_HEAT_FLOW_M2_START_YEAR as string,\n\t\tOTHER_HEAT_FLOW_M2_START_VALUE as string,\n\t\tNORMAL_HEAT_FLOW_M2_START_VALUE as string,\n\t\tNORMAL_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tNORMAL_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tNORMAL_HEAT_FLOW_M2_START_YEAR as string,\n\t\tNORMAL_SELL_PRICE_M2 as string,\n\t\tOFFICES_HEAT_FLOW_M2_START_YEAR as string,\n\t\tOFFICES_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tOFFICES_HEAT_FLOW_M2_START_VALUE as string,\n\t\tOFFICES_SELL_PRICE_M2 as string,\n\t\tOFFICES_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tLUXE_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tLUXE_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tLUXE_SELL_PRICE_M2 as string,\n\t\tLUXE_HEAT_FLOW_M2_START_YEAR as string,\n\t\tLUXE_HEAT_FLOW_M2_START_VALUE as string,\n\t\tINDUSTRY_SELL_PRICE_M2 as string,\n\t\tINDUSTRY_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tINDUSTRY_HEAT_FLOW_M2_START_YEAR as string,\n\t\tINDUSTRY_HEAT_FLOW_M2_START_VALUE as string,\n\t\tINDUSTRY_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tEDUCATION_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tEDUCATION_SELL_PRICE_M2 as string,\n\t\tEDUCATION_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tEDUCATION_HEAT_FLOW_M2_START_YEAR as string,\n\t\tEDUCATION_HEAT_FLOW_M2_START_VALUE as string,\n\t\tLEISURE_SELL_PRICE_M2 as string,\n\t\tLEISURE_HEAT_FLOW_M2_START_YEAR as string,\n\t\tLEISURE_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tLEISURE_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tLEISURE_HEAT_FLOW_M2_START_VALUE as string,\n\t\tHEALTHCARE_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tHEALTHCARE_HEAT_FLOW_M2_START_VALUE as string,\n\t\tHEALTHCARE_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tHEALTHCARE_SELL_PRICE_M2 as string,\n\t\tHEALTHCARE_HEAT_FLOW_M2_START_YEAR as string,\n\t\tNATURE_HEAT_FLOW_M2_START_YEAR as string,\n\t\tNATURE_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tNATURE_SELL_PRICE_M2 as string,\n\t\tNATURE_HEAT_FLOW_M2_START_VALUE as string,\n\t\tNATURE_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tGARDEN_HEAT_FLOW_M2_START_YEAR as string,\n\t\tGARDEN_HEAT_FLOW_M2_CHANGE_PER_YEAR as string,\n\t\tGARDEN_HEAT_FLOW_M2_START_VALUE as string,\n\t\tGARDEN_HEAT_POWER_TO_FLOW_MULTIPLIER as string,\n\t\tGARDEN_SELL_PRICE_M2 as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tsingleDocument: true,\n\tpartitionBy('roundRobin', 2)) ~> sourceBuildings\nsource(output(\n\t\tBuilding_sqnr as integer,\n\t\tBuilding_ID as integer,\n\t\tLoad_date_timestamp as timestamp,\n\t\tRecord_source as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> HubBuildings\nsourceBuildings, HubBuildings join(toInteger(ID) == Building_ID,\n\tjoinType:'inner',\n\tbroadcast: 'auto')~> JoinSourceHubBuildings\nJoinSourceHubBuildings select(mapColumn(\n\t\tBuilding_sqnr,\n\t\tOwner = OWNER,\n\t\tName = NAME,\n\t\tFunction_ = FUNCTION,\n\t\tConstruction_year = BOUWJAAR,\n\t\tSlanting_roof_height = SLANTING_ROOF_HEIGHT,\n\t\tHeat_effect = HEAT_EFFECT\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> SelectSourceHubBuildings\nSelectSourceHubBuildings sink(input(\n\t\tBuilding_sqnr as integer,\n\t\tLoad_date_timestamp as timestamp,\n\t\tEnd_date_timestamp as timestamp,\n\t\tRecord_source as string,\n\t\tName as string,\n\t\tOwner as string,\n\t\tFunction_ as string,\n\t\tConstruction_year as integer,\n\t\tSlanting_roof_height as double,\n\t\tHeat_effect as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table',\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> SatBuildings"
+		}
+	}
+}
