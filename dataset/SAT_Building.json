@@ -1,0 +1,65 @@
+{
+	"name": "SAT_Building",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Building_sqnr",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Load_date_timestamp",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "End_date_timestamp",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Record_source",
+				"type": "varchar"
+			},
+			{
+				"name": "Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Owner",
+				"type": "varchar"
+			},
+			{
+				"name": "Function_",
+				"type": "varchar"
+			},
+			{
+				"name": "Construction_year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Slanting_roof_height",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Heat_effect",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "SpijkerkwartierDV",
+			"table": "SAT_Building"
+		}
+	}
+}

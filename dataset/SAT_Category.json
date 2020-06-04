@@ -1,0 +1,42 @@
+{
+	"name": "SAT_Category",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Category_sqnr",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Load_date_timestamp",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "End_date_timestamp",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Record_source",
+				"type": "varchar"
+			},
+			{
+				"name": "Name",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "SpijkerkwartierDV",
+			"table": "SAT_Category"
+		}
+	}
+}

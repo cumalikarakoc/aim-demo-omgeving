@@ -1,0 +1,696 @@
+{
+	"name": "buildings_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureStorageLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "buildings.json",
+				"folderPath": "input",
+				"container": "aim-demo-omgeving"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"DISTURBANCE_DISTANCE_M": {
+					"type": "integer"
+				},
+				"TRAFFIC_FLOW": {
+					"type": "integer"
+				},
+				"GREEN_M2": {
+					"type": "integer"
+				},
+				"BOWEN_RATIO": {
+					"type": "integer"
+				},
+				"SLANTING_ROOF_HEIGHT": {
+					"type": "integer"
+				},
+				"OWNER": {
+					"type": "string"
+				},
+				"ZONING_PERMIT_REQUIRED": {
+					"type": "integer"
+				},
+				"BRIDGE_CONSTRUCTION_COST_M2": {
+					"type": "integer"
+				},
+				"BRIDGE_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "integer"
+				},
+				"GROUND_COLOR": {
+					"type": "integer"
+				},
+				"ID": {
+					"type": "integer"
+				},
+				"ROOF_COLOR": {
+					"type": "integer"
+				},
+				"SEWERED": {
+					"type": "integer"
+				},
+				"DRAINAGE": {
+					"type": "integer"
+				},
+				"TRAFFIC_LANES": {
+					"type": "integer"
+				},
+				"LIVABILITY_EFFECT": {
+					"type": "integer"
+				},
+				"WATER_MANNING": {
+					"type": "number"
+				},
+				"WATER_STORAGE_M2": {
+					"type": "integer"
+				},
+				"MONUMENTAL": {
+					"type": "integer"
+				},
+				"BRIDGE_SELL_PRICE_M2": {
+					"type": "integer"
+				},
+				"DEMOLISH_TIME_IN_MONTHS": {
+					"type": "integer"
+				},
+				"FUNCTION": {
+					"type": "string"
+				},
+				"NAME": {
+					"type": "string"
+				},
+				"BRIDGE_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "integer"
+				},
+				"GROUND_INFILTRATION_MD": {
+					"type": "integer"
+				},
+				"BRIDGE_UNIT_SIZE_M2": {
+					"type": "integer"
+				},
+				"HEIGHT_OFFSET_M": {
+					"type": "integer"
+				},
+				"CRITICAL_INFRASTRUCTURE": {
+					"type": "integer"
+				},
+				"BOUWJAAR": {
+					"type": "integer"
+				},
+				"ROOT_DEPTH_M": {
+					"type": "integer"
+				},
+				"TRAFFIC_NOISE_SIGMA": {
+					"type": "integer"
+				},
+				"TRAFFIC_SPEED": {
+					"type": "integer"
+				},
+				"HEAT_EFFECT": {
+					"type": "integer"
+				},
+				"MAX_FLOORS": {
+					"type": "integer"
+				},
+				"BRIDGE_DEMOLISH_COST_M2": {
+					"type": "integer"
+				},
+				"BRIDGE_HEAT_FLOW_M2_START_VALUE": {
+					"type": "integer"
+				},
+				"BRIDGE_BUYOUT_COST_M2": {
+					"type": "integer"
+				},
+				"BRIDGE_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "integer"
+				},
+				"WATER_EVAPORATION_FACTOR": {
+					"type": "number"
+				},
+				"BRIDGE_CATEGORY_WEIGHT": {
+					"type": "integer"
+				},
+				"DISTANCE_ZONE_M": {
+					"type": "integer"
+				},
+				"TRAFFIC_NOISE_TAU": {
+					"type": "integer"
+				},
+				"FOLIAGE_CROWN_FACTOR": {
+					"type": "integer"
+				},
+				"BRIDGE_HEAT_FLOW_M2_START_YEAR": {
+					"type": "integer"
+				},
+				"DEFAULT_FLOORS": {
+					"type": "integer"
+				},
+				"EXTRA_COLOR": {
+					"type": "integer"
+				},
+				"TOP_COLOR": {
+					"type": "integer"
+				},
+				"PIPES_PERMITTED": {
+					"type": "integer"
+				},
+				"FLOOR_HEIGHT_M": {
+					"type": "integer"
+				},
+				"TERRAIN_MIX": {
+					"type": "number"
+				},
+				"FLOATING": {
+					"type": "integer"
+				},
+				"BRIDGE_PARKING_LOTS_PER_M2": {
+					"type": "integer"
+				},
+				"MIN_FLOORS": {
+					"type": "integer"
+				},
+				"SAFETY_DISTANCE_M": {
+					"type": "integer"
+				},
+				"CONSTRUCTION_TIME_IN_MONTHS": {
+					"type": "integer"
+				},
+				"ROAD_HEAT_FLOW_M2_START_YEAR": {
+					"type": "integer"
+				},
+				"ROAD_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "integer"
+				},
+				"ROAD_UNIT_SIZE_M2": {
+					"type": "integer"
+				},
+				"ROAD_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "integer"
+				},
+				"ROAD_CONSTRUCTION_COST_M2": {
+					"type": "integer"
+				},
+				"ROAD_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "integer"
+				},
+				"ROAD_CATEGORY_WEIGHT": {
+					"type": "integer"
+				},
+				"ROAD_HEAT_FLOW_M2_START_VALUE": {
+					"type": "integer"
+				},
+				"ROAD_BUYOUT_COST_M2": {
+					"type": "integer"
+				},
+				"ROAD_PARKING_LOTS_PER_M2": {
+					"type": "integer"
+				},
+				"ROAD_SELL_PRICE_M2": {
+					"type": "integer"
+				},
+				"ROAD_DEMOLISH_COST_M2": {
+					"type": "integer"
+				},
+				"PAVED_AREA_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"PAVED_AREA_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"PAVED_AREA_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"PAVED_AREA_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"PAVED_AREA_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"PAVED_AREA_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"PAVED_AREA_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"PAVED_AREA_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"PAVED_AREA_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"PAVED_AREA_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"PAVED_AREA_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"PAVED_AREA_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"SOCIAL_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"SOCIAL_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"SOCIAL_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"SOCIAL_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"SOCIAL_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"CONSTRUCTION_FINISH_DATE": {
+					"type": "null"
+				},
+				"SOCIAL_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"SOCIAL_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"SOCIAL_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"SOCIAL_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"SOCIAL_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"SOCIAL_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"SOCIAL_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"SHOPPING_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"SHOPPING_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"SHOPPING_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"SHOPPING_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"SHOPPING_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"SHOPPING_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"SHOPPING_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"SHOPPING_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"SHOPPING_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"SHOPPING_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"SHOPPING_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"SHOPPING_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"OTHER_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"OTHER_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"OTHER_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"OTHER_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"OTHER_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"OTHER_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"OTHER_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"OTHER_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"OTHER_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"OTHER_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"OTHER_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"OTHER_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"NORMAL_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"NORMAL_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"NORMAL_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"NORMAL_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"NORMAL_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"NORMAL_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"NORMAL_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"NORMAL_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"NORMAL_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"NORMAL_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"NORMAL_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"NORMAL_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"OFFICES_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"OFFICES_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"OFFICES_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"OFFICES_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"OFFICES_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"OFFICES_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"OFFICES_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"OFFICES_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"OFFICES_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"OFFICES_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"OFFICES_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"OFFICES_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"LUXE_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"LUXE_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"LUXE_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"LUXE_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"LUXE_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"LUXE_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"LUXE_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"LUXE_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"LUXE_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"LUXE_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"LUXE_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"LUXE_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"INDUSTRY_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"INDUSTRY_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"INDUSTRY_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"INDUSTRY_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"INDUSTRY_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"INDUSTRY_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"INDUSTRY_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"INDUSTRY_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"INDUSTRY_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"INDUSTRY_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"INDUSTRY_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"INDUSTRY_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"EDUCATION_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"EDUCATION_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"EDUCATION_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"EDUCATION_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"EDUCATION_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"EDUCATION_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"EDUCATION_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"EDUCATION_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"EDUCATION_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"EDUCATION_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"EDUCATION_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"EDUCATION_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"LEISURE_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"LEISURE_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"LEISURE_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"LEISURE_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"LEISURE_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"LEISURE_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"LEISURE_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"LEISURE_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"LEISURE_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"LEISURE_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"LEISURE_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"LEISURE_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"HEALTHCARE_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"HEALTHCARE_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"HEALTHCARE_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"HEALTHCARE_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"HEALTHCARE_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"HEALTHCARE_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"HEALTHCARE_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"HEALTHCARE_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"HEALTHCARE_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"HEALTHCARE_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"HEALTHCARE_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"HEALTHCARE_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"NATURE_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"NATURE_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"NATURE_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"NATURE_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"NATURE_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"NATURE_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"NATURE_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"NATURE_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"NATURE_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"NATURE_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"NATURE_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"NATURE_BUYOUT_COST_M2": {
+					"type": "null"
+				},
+				"GARDEN_PARKING_LOTS_DEMAND_PER_M2": {
+					"type": "null"
+				},
+				"GARDEN_HEAT_FLOW_M2_START_YEAR": {
+					"type": "null"
+				},
+				"GARDEN_HEAT_FLOW_M2_CHANGE_PER_YEAR": {
+					"type": "null"
+				},
+				"GARDEN_UNIT_SIZE_M2": {
+					"type": "null"
+				},
+				"GARDEN_CATEGORY_WEIGHT": {
+					"type": "null"
+				},
+				"GARDEN_CONSTRUCTION_COST_M2": {
+					"type": "null"
+				},
+				"GARDEN_HEAT_FLOW_M2_START_VALUE": {
+					"type": "null"
+				},
+				"GARDEN_DEMOLISH_COST_M2": {
+					"type": "null"
+				},
+				"GARDEN_HEAT_POWER_TO_FLOW_MULTIPLIER": {
+					"type": "null"
+				},
+				"GARDEN_PARKING_LOTS_PER_M2": {
+					"type": "null"
+				},
+				"GARDEN_SELL_PRICE_M2": {
+					"type": "null"
+				},
+				"GARDEN_BUYOUT_COST_M2": {
+					"type": "null"
+				}
+			}
+		}
+	}
+}
