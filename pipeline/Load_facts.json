@@ -1,9 +1,9 @@
 {
-	"name": "Load_Dimentions",
+	"name": "Load_facts",
 	"properties": {
 		"activities": [
 			{
-				"name": "Load_Dimention",
+				"name": "Load_Facts",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "Load_Dimention",
+						"referenceName": "Load_Facts",
 						"type": "DataFlowReference"
 					},
 					"compute": {
