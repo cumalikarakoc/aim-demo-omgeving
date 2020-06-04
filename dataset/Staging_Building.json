@@ -984,7 +984,7 @@
 		],
 		"typeProperties": {
 			"schema": "StagingSchema",
-			"table": "Buildings"
+			"table": "Building"
 		}
 	}
 }
