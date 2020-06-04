@@ -1,5 +1,5 @@
 {
-	"name": "Start_Building_Fact",
+	"name": "Star_Building_Fact",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabaseLinkedService",

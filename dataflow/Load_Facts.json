@@ -25,7 +25,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "Start_Building_Fact",
+						"referenceName": "Star_Building_Fact",
 						"type": "DatasetReference"
 					},
 					"name": "SinkBuildingFact"
