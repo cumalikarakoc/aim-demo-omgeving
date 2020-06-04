@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "dataflow1",
+				"name": "Load_Dimention",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -26,7 +26,7 @@
 				}
 			},
 			{
-				"name": "dataflow11",
+				"name": "Load_Facts",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
