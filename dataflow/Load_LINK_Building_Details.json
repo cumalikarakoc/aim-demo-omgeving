@@ -1,6 +1,9 @@
 {
 	"name": "Load_LINK_Building_Details",
 	"properties": {
+		"folder": {
+			"name": "DV"
+		},
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [

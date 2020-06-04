@@ -44,7 +44,10 @@
 										"type": "String"
 									},
 									"category_id": {
-										"value": "@item().Category_ID",
+										"value": {
+											"value": "@item().Category_ID",
+											"type": "Expression"
+										},
 										"type": "String"
 									}
 								}
@@ -130,6 +133,9 @@
 				]
 			}
 		],
+		"folder": {
+			"name": "Staging"
+		},
 		"annotations": []
 	}
 }

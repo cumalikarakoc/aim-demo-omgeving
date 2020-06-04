@@ -1,6 +1,9 @@
 {
 	"name": "Load_Sats",
 	"properties": {
+		"folder": {
+			"name": "DV"
+		},
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [
