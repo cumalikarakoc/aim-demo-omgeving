@@ -1,0 +1,42 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "HUB_Building",
+						"type": "DatasetReference"
+					},
+					"name": "hubBuilding"
+				},
+				{
+					"dataset": {
+						"referenceName": "SAT_Building",
+						"type": "DatasetReference"
+					},
+					"name": "satBuilding"
+				},
+				{
+					"name": "HubCategory"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Star_Building",
+						"type": "DatasetReference"
+					},
+					"name": "SinkBuildingDemension"
+				}
+			],
+			"transformations": [
+				{
+					"name": "LookupBuildingSqNr"
+				}
+			],
+			"script": "source(output(\n\t\tBuilding_sqnr as integer,\n\t\tBuilding_ID as integer,\n\t\tLoad_date_timestamp as timestamp,\n\t\tRecord_source as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> hubBuilding\nsource(output(\n\t\tBuilding_sqnr as integer,\n\t\tLoad_date_timestamp as timestamp,\n\t\tEnd_date_timestamp as timestamp,\n\t\tRecord_source as string,\n\t\tName as string,\n\t\tOwner as string,\n\t\tFunction_ as string,\n\t\tConstruction_year as integer,\n\t\tSlanting_roof_height as double,\n\t\tHeat_effect as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> satBuilding\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false) ~> HubCategory\nhubBuilding, satBuilding lookup(hubBuilding@Building_sqnr == satBuilding@Building_sqnr,\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> LookupBuildingSqNr\nLookupBuildingSqNr sink(input(\n\t\tBuilding_sqnr as integer,\n\t\tName as string,\n\t\tOwner as string,\n\t\tFunction as string,\n\t\tConstruction_year as integer,\n\t\tHeat_effect as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table',\n\tmapColumn(\n\t\tBuilding_sqnr = hubBuilding@Building_sqnr,\n\t\tName,\n\t\tOwner,\n\t\tFunction = Function_,\n\t\tConstruction_year,\n\t\tHeat_effect\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> SinkBuildingDemension"
+		}
+	}
+}
