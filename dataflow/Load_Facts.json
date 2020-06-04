@@ -1,0 +1,42 @@
+{
+	"name": "Load_Facts",
+	"properties": {
+		"folder": {
+			"name": "DM"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "LINK_Building_Details",
+						"type": "DatasetReference"
+					},
+					"name": "LinkBuildingDetails"
+				},
+				{
+					"dataset": {
+						"referenceName": "SAT_Building_Details",
+						"type": "DatasetReference"
+					},
+					"name": "SatBuildingDetails"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Start_Building_Fact",
+						"type": "DatasetReference"
+					},
+					"name": "SinkBuildingFact"
+				}
+			],
+			"transformations": [
+				{
+					"name": "LookupBuildingSqNrCategorySqNr"
+				}
+			],
+			"script": "source(output(\n\t\tBuilding_sqnr as integer,\n\t\tCategory_sqnr as integer,\n\t\tLoad_date_timestamp as timestamp,\n\t\tRecord_source as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> LinkBuildingDetails\nsource(output(\n\t\tBuilding_sqnr as integer,\n\t\tCategory_sqnr as integer,\n\t\tLoad_date_timestamp as timestamp,\n\t\tEnd_date_timestamp as timestamp,\n\t\tRecord_source as string,\n\t\tConstruction_cost_m2 as double,\n\t\tDemolish_cost_m2 as double,\n\t\tBuyout_cost_m2 as double,\n\t\tSell_price_m2 as double,\n\t\tParking_lot_demand_per_m2 as double,\n\t\tparking_lots_per_m2 as double\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> SatBuildingDetails\nLinkBuildingDetails, SatBuildingDetails lookup(LinkBuildingDetails@Building_sqnr == SatBuildingDetails@Building_sqnr\n\t&& LinkBuildingDetails@Category_sqnr == SatBuildingDetails@Category_sqnr,\n\tmultiple: false,\n\tpickup: 'any',\n\tbroadcast: 'auto')~> LookupBuildingSqNrCategorySqNr\nLookupBuildingSqNrCategorySqNr sink(input(\n\t\tBuilding_sqnr as integer,\n\t\tCategory_sqnr as integer,\n\t\tConstruction_cost_m2 as double,\n\t\tDemolish_cost_m2 as double,\n\t\tBuyout_cost_m2 as double,\n\t\tSell_price as double,\n\t\tParking_lot_demand_per_m2 as double,\n\t\tParking_lots_per_m2 as double\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table',\n\tmapColumn(\n\t\tBuilding_sqnr = LinkBuildingDetails@Building_sqnr,\n\t\tCategory_sqnr = LinkBuildingDetails@Category_sqnr,\n\t\tConstruction_cost_m2,\n\t\tDemolish_cost_m2,\n\t\tBuyout_cost_m2,\n\t\tSell_price = Sell_price_m2,\n\t\tParking_lot_demand_per_m2,\n\t\tParking_lots_per_m2 = parking_lots_per_m2\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> SinkBuildingFact"
+		}
+	}
+}
