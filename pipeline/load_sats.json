@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "Load_Sat_Building",
+						"referenceName": "Load_Sats",
 						"type": "DataFlowReference"
 					},
 					"compute": {

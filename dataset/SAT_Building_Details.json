@@ -1,0 +1,73 @@
+{
+	"name": "SAT_Building_Details",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Building_sqnr",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Category_sqnr",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Load_date_timestamp",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "End_date_timestamp",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Record_source",
+				"type": "varchar"
+			},
+			{
+				"name": "Construction_cost_m2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Demolish_cost_m2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Buyout_cost_m2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Sell_price_m2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Parking_lot_demand_per_m2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "parking_lots_per_m2",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "SpijkerkwartierDV",
+			"table": "SAT_Building_Details"
+		}
+	}
+}
