@@ -16,17 +16,8 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "JsonSource",
-						"additionalColumns": [
-							{
-								"name": "Source",
-								"value": ""
-							}
-						],
-						"storeSettings": {
-							"type": "AzureBlobStorageReadSettings",
-							"recursive": true
-						}
+						"type": "AzureSqlSource",
+						"queryTimeout": "02:00:00"
 					},
 					"sink": {
 						"type": "AzureSqlSink"
@@ -37,10 +28,12 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['ID']"
+									"name": "ID",
+									"type": "String"
 								},
 								"sink": {
-									"name": "Building_ID"
+									"name": "Building_ID",
+									"type": "Int32"
 								}
 							}
 						]
@@ -48,7 +41,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "buildings_json",
+						"referenceName": "Staging_Building",
 						"type": "DatasetReference"
 					}
 				],
@@ -85,12 +78,10 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "Category_ID",
-									"type": "Int32"
+									"name": "Category_ID"
 								},
 								"sink": {
-									"name": "Category_ID",
-									"type": "Int32"
+									"name": "Category_ID"
 								}
 							}
 						]

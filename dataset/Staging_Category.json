@@ -1,5 +1,5 @@
 {
-	"name": "Category_Staging",
+	"name": "Staging_Category",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabaseLinkedService",
@@ -49,8 +49,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "CategorySchema",
-			"table": "Category_Staging"
+			"schema": "StagingSchema",
+			"table": "Category"
 		}
 	}
 }

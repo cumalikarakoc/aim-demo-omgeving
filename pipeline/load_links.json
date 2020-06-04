@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "dataflow1",
+				"name": "Load_Link_Building_Details",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "Load_Link_Building_Details",
+						"referenceName": "Load_LINK_Building_Details",
 						"type": "DataFlowReference"
 					},
 					"compute": {
