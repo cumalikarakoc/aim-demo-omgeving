@@ -44,7 +44,10 @@
 										"type": "String"
 									},
 									"category_id": {
-										"value": "@item().Category_ID",
+										"value": {
+											"value": "@item().Category_ID",
+											"type": "Expression"
+										},
 										"type": "String"
 									}
 								}
@@ -114,7 +117,2028 @@
 					"sink": {
 						"type": "AzureSqlSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['DISTURBANCE_DISTANCE_M']"
+								},
+								"sink": {
+									"name": "DISTURBANCE_DISTANCE_M",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['TRAFFIC_FLOW']"
+								},
+								"sink": {
+									"name": "TRAFFIC_FLOW",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GREEN_M2']"
+								},
+								"sink": {
+									"name": "GREEN_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BOWEN_RATIO']"
+								},
+								"sink": {
+									"name": "BOWEN_RATIO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SLANTING_ROOF_HEIGHT']"
+								},
+								"sink": {
+									"name": "SLANTING_ROOF_HEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OWNER']"
+								},
+								"sink": {
+									"name": "OWNER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ZONING_PERMIT_REQUIRED']"
+								},
+								"sink": {
+									"name": "ZONING_PERMIT_REQUIRED",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "BRIDGE_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "BRIDGE_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GROUND_COLOR']"
+								},
+								"sink": {
+									"name": "GROUND_COLOR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ID']"
+								},
+								"sink": {
+									"name": "ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROOF_COLOR']"
+								},
+								"sink": {
+									"name": "ROOF_COLOR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SEWERED']"
+								},
+								"sink": {
+									"name": "SEWERED",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['DRAINAGE']"
+								},
+								"sink": {
+									"name": "DRAINAGE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['TRAFFIC_LANES']"
+								},
+								"sink": {
+									"name": "TRAFFIC_LANES",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LIVABILITY_EFFECT']"
+								},
+								"sink": {
+									"name": "LIVABILITY_EFFECT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['WATER_MANNING']"
+								},
+								"sink": {
+									"name": "WATER_MANNING",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['WATER_STORAGE_M2']"
+								},
+								"sink": {
+									"name": "WATER_STORAGE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['MONUMENTAL']"
+								},
+								"sink": {
+									"name": "MONUMENTAL",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "BRIDGE_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['DEMOLISH_TIME_IN_MONTHS']"
+								},
+								"sink": {
+									"name": "DEMOLISH_TIME_IN_MONTHS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['FUNCTION']"
+								},
+								"sink": {
+									"name": "FUNCTION_",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NAME']"
+								},
+								"sink": {
+									"name": "NAME",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "BRIDGE_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GROUND_INFILTRATION_MD']"
+								},
+								"sink": {
+									"name": "GROUND_INFILTRATION_MD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "BRIDGE_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEIGHT_OFFSET_M']"
+								},
+								"sink": {
+									"name": "HEIGHT_OFFSET_M",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['CRITICAL_INFRASTRUCTURE']"
+								},
+								"sink": {
+									"name": "CRITICAL_INFRASTRUCTURE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BOUWJAAR']"
+								},
+								"sink": {
+									"name": "BOUWJAAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROOT_DEPTH_M']"
+								},
+								"sink": {
+									"name": "ROOT_DEPTH_M",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['TRAFFIC_NOISE_SIGMA']"
+								},
+								"sink": {
+									"name": "TRAFFIC_NOISE_SIGMA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['TRAFFIC_SPEED']"
+								},
+								"sink": {
+									"name": "TRAFFIC_SPEED",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEAT_EFFECT']"
+								},
+								"sink": {
+									"name": "HEAT_EFFECT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['MAX_FLOORS']"
+								},
+								"sink": {
+									"name": "MAX_FLOORS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "BRIDGE_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "BRIDGE_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "BRIDGE_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "BRIDGE_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['WATER_EVAPORATION_FACTOR']"
+								},
+								"sink": {
+									"name": "WATER_EVAPORATION_FACTOR",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "BRIDGE_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['DISTANCE_ZONE_M']"
+								},
+								"sink": {
+									"name": "DISTANCE_ZONE_M",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['TRAFFIC_NOISE_TAU']"
+								},
+								"sink": {
+									"name": "TRAFFIC_NOISE_TAU",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['FOLIAGE_CROWN_FACTOR']"
+								},
+								"sink": {
+									"name": "FOLIAGE_CROWN_FACTOR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "BRIDGE_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['DEFAULT_FLOORS']"
+								},
+								"sink": {
+									"name": "DEFAULT_FLOORS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EXTRA_COLOR']"
+								},
+								"sink": {
+									"name": "EXTRA_COLOR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['TOP_COLOR']"
+								},
+								"sink": {
+									"name": "TOP_COLOR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PIPES_PERMITTED']"
+								},
+								"sink": {
+									"name": "PIPES_PERMITTED",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['FLOOR_HEIGHT_M']"
+								},
+								"sink": {
+									"name": "FLOOR_HEIGHT_M",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['TERRAIN_MIX']"
+								},
+								"sink": {
+									"name": "TERRAIN_MIX",
+									"type": "Double"
+								}
+							},
+							{
+								"source": {
+									"path": "$['FLOATING']"
+								},
+								"sink": {
+									"name": "FLOATING",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['BRIDGE_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "BRIDGE_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['MIN_FLOORS']"
+								},
+								"sink": {
+									"name": "MIN_FLOORS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SAFETY_DISTANCE_M']"
+								},
+								"sink": {
+									"name": "SAFETY_DISTANCE_M",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['CONSTRUCTION_TIME_IN_MONTHS']"
+								},
+								"sink": {
+									"name": "CONSTRUCTION_TIME_IN_MONTHS",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "ROAD_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "ROAD_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "ROAD_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "ROAD_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "ROAD_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "ROAD_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "ROAD_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "ROAD_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "ROAD_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "ROAD_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "ROAD_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['ROAD_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "ROAD_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['PAVED_AREA_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "PAVED_AREA_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "SOCIAL_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "SOCIAL_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "SOCIAL_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "SOCIAL_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "SOCIAL_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['CONSTRUCTION_FINISH_DATE']"
+								},
+								"sink": {
+									"name": "CONSTRUCTION_FINISH_DATE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "SOCIAL_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "SOCIAL_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "SOCIAL_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "SOCIAL_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "SOCIAL_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "SOCIAL_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SOCIAL_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "SOCIAL_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "SHOPPING_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "SHOPPING_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "SHOPPING_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "SHOPPING_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "SHOPPING_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "SHOPPING_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "SHOPPING_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "SHOPPING_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "SHOPPING_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "SHOPPING_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "SHOPPING_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['SHOPPING_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "SHOPPING_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "OTHER_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "OTHER_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "OTHER_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "OTHER_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "OTHER_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "OTHER_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "OTHER_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "OTHER_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "OTHER_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "OTHER_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "OTHER_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OTHER_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "OTHER_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "NORMAL_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "NORMAL_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "NORMAL_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "NORMAL_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "NORMAL_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "NORMAL_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "NORMAL_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "NORMAL_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "NORMAL_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "NORMAL_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "NORMAL_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NORMAL_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "NORMAL_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "OFFICES_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "OFFICES_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "OFFICES_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "OFFICES_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "OFFICES_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "OFFICES_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "OFFICES_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "OFFICES_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "OFFICES_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "OFFICES_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "OFFICES_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OFFICES_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "OFFICES_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "LUXE_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "LUXE_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "LUXE_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "LUXE_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "LUXE_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "LUXE_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "LUXE_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "LUXE_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "LUXE_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "LUXE_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "LUXE_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LUXE_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "LUXE_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "INDUSTRY_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "INDUSTRY_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "INDUSTRY_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "INDUSTRY_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "INDUSTRY_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "INDUSTRY_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "INDUSTRY_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "INDUSTRY_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "INDUSTRY_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "INDUSTRY_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "INDUSTRY_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['INDUSTRY_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "INDUSTRY_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "EDUCATION_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "EDUCATION_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "EDUCATION_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "EDUCATION_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "EDUCATION_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "EDUCATION_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "EDUCATION_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "EDUCATION_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "EDUCATION_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "EDUCATION_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "EDUCATION_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['EDUCATION_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "EDUCATION_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "LEISURE_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "LEISURE_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "LEISURE_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "LEISURE_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "LEISURE_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "LEISURE_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "LEISURE_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "LEISURE_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "LEISURE_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "LEISURE_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "LEISURE_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['LEISURE_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "LEISURE_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['HEALTHCARE_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "HEALTHCARE_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "NATURE_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "NATURE_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "NATURE_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "NATURE_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "NATURE_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "NATURE_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "NATURE_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "NATURE_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "NATURE_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "NATURE_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "NATURE_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['NATURE_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "NATURE_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_PARKING_LOTS_DEMAND_PER_M2']"
+								},
+								"sink": {
+									"name": "GARDEN_PARKING_LOTS_DEMAND_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_HEAT_FLOW_M2_START_YEAR']"
+								},
+								"sink": {
+									"name": "GARDEN_HEAT_FLOW_M2_START_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_HEAT_FLOW_M2_CHANGE_PER_YEAR']"
+								},
+								"sink": {
+									"name": "GARDEN_HEAT_FLOW_M2_CHANGE_PER_YEAR",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_UNIT_SIZE_M2']"
+								},
+								"sink": {
+									"name": "GARDEN_UNIT_SIZE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_CATEGORY_WEIGHT']"
+								},
+								"sink": {
+									"name": "GARDEN_CATEGORY_WEIGHT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_CONSTRUCTION_COST_M2']"
+								},
+								"sink": {
+									"name": "GARDEN_CONSTRUCTION_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_HEAT_FLOW_M2_START_VALUE']"
+								},
+								"sink": {
+									"name": "GARDEN_HEAT_FLOW_M2_START_VALUE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_DEMOLISH_COST_M2']"
+								},
+								"sink": {
+									"name": "GARDEN_DEMOLISH_COST_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_HEAT_POWER_TO_FLOW_MULTIPLIER']"
+								},
+								"sink": {
+									"name": "GARDEN_HEAT_POWER_TO_FLOW_MULTIPLIER",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_PARKING_LOTS_PER_M2']"
+								},
+								"sink": {
+									"name": "GARDEN_PARKING_LOTS_PER_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_SELL_PRICE_M2']"
+								},
+								"sink": {
+									"name": "GARDEN_SELL_PRICE_M2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['GARDEN_BUYOUT_COST_M2']"
+								},
+								"sink": {
+									"name": "GARDEN_BUYOUT_COST_M2",
+									"type": "String"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
