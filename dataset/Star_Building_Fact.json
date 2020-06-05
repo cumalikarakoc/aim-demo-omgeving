@@ -1,0 +1,60 @@
+{
+	"name": "Star_Building_Fact",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseLinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "DM"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Building_sqnr",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Category_sqnr",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Construction_cost_m2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Demolish_cost_m2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Buyout_cost_m2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Sell_price",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Parking_lot_demand_per_m2",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "Parking_lots_per_m2",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "SpijkerkwartierSTAR",
+			"table": "Building_Fact"
+		}
+	}
+}

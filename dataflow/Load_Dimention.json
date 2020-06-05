@@ -1,0 +1,66 @@
+{
+	"name": "Load_Dimention",
+	"properties": {
+		"folder": {
+			"name": "DM"
+		},
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "HUB_Building",
+						"type": "DatasetReference"
+					},
+					"name": "HubBuilding"
+				},
+				{
+					"dataset": {
+						"referenceName": "SAT_Building",
+						"type": "DatasetReference"
+					},
+					"name": "SatBuilding"
+				},
+				{
+					"dataset": {
+						"referenceName": "HUB_Category",
+						"type": "DatasetReference"
+					},
+					"name": "HubCategory"
+				},
+				{
+					"dataset": {
+						"referenceName": "SAT_Category",
+						"type": "DatasetReference"
+					},
+					"name": "SatCategory"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Star_Building",
+						"type": "DatasetReference"
+					},
+					"name": "SinkBuildingDimension"
+				},
+				{
+					"dataset": {
+						"referenceName": "Star_Category",
+						"type": "DatasetReference"
+					},
+					"name": "SinkCategoryDimension"
+				}
+			],
+			"transformations": [
+				{
+					"name": "JoinBuildingSqNr"
+				},
+				{
+					"name": "JoinCategorySqNr"
+				}
+			],
+			"script": "source(output(\n\t\tBuilding_sqnr as integer,\n\t\tBuilding_ID as integer,\n\t\tLoad_date_timestamp as timestamp,\n\t\tRecord_source as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> HubBuilding\nsource(output(\n\t\tBuilding_sqnr as integer,\n\t\tLoad_date_timestamp as timestamp,\n\t\tEnd_date_timestamp as timestamp,\n\t\tRecord_source as string,\n\t\tName as string,\n\t\tOwner as string,\n\t\tFunction_ as string,\n\t\tConstruction_year as integer,\n\t\tSlanting_roof_height as double,\n\t\tHeat_effect as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> SatBuilding\nsource(output(\n\t\tCategory_sqnr as integer,\n\t\tCategory_ID as integer,\n\t\tLoad_date_timestamp as timestamp,\n\t\tRecord_source as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> HubCategory\nsource(output(\n\t\tCategory_sqnr as integer,\n\t\tLoad_date_timestamp as timestamp,\n\t\tEnd_date_timestamp as timestamp,\n\t\tRecord_source as string,\n\t\tName as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> SatCategory\nHubBuilding, SatBuilding join(SatBuilding@Building_sqnr == HubBuilding@Building_sqnr,\n\tjoinType:'inner',\n\tbroadcast: 'auto')~> JoinBuildingSqNr\nHubCategory, SatCategory join(HubCategory@Category_sqnr == SatCategory@Category_sqnr,\n\tjoinType:'inner',\n\tbroadcast: 'auto')~> JoinCategorySqNr\nJoinBuildingSqNr sink(input(\n\t\tBuilding_sqnr as integer,\n\t\tName as string,\n\t\tOwner as string,\n\t\tFunction as string,\n\t\tConstruction_year as integer,\n\t\tHeat_effect as integer\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table',\n\tmapColumn(\n\t\tBuilding_sqnr = HubBuilding@Building_sqnr,\n\t\tName,\n\t\tOwner,\n\t\tFunction = Function_,\n\t\tConstruction_year,\n\t\tHeat_effect\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> SinkBuildingDimension\nJoinCategorySqNr sink(input(\n\t\tCategory_sqnr as integer,\n\t\tName as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:false,\n\tformat: 'table',\n\tmapColumn(\n\t\tCategory_sqnr = HubCategory@Category_sqnr,\n\t\tName\n\t),\n\tskipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> SinkCategoryDimension"
+		}
+	}
+}
