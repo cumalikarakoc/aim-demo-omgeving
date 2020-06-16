@@ -1,9 +1,9 @@
 {
-	"name": "Load_Dimentions",
+	"name": "Load_Dimensions",
 	"properties": {
 		"activities": [
 			{
-				"name": "Load_Dimention",
+				"name": "Load_Dimension",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
