@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "Load_Dimention",
+						"referenceName": "Load_Dimension",
 						"type": "DataFlowReference"
 					},
 					"compute": {
